@@ -14,7 +14,7 @@ EOF
 
 #create view sql
 for TNAME in `/data/mysql/bin/mysql -u$USER -e"SHOW TABLES FROM $DATABASE"`;do
-	if [ $TNAME != "Tables_in_test" ];then
+	if [ $TNAME != "Tables_in_$DATABASE" ];then
 		COLUMN=""
 		if [ ${#STR} -gt 0  ];then
 			STR="${STR} UNION ALL "
