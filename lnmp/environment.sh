@@ -104,7 +104,7 @@ ldconfig
 /etc/init.d/mysqld start
 exit
 # install php
-wget wget -c $PHP_MIRROR/distributions/$PHP_FILE_NAME
+wget -c $PHP_MIRROR/distributions/$PHP_FILE_NAME
 tar -xzvf $PHP_FILE_NAME
 cd $PHP_VERSION
 ./configure --prefix="$PHP_PREFIX" --with-config-file-path="$PHP_PREFIX" --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysql="$MYSQL_PREFIX" --with-mysqli="$MYSQL_PREFIX/bin/mysql_config" --with-pdo-mysql="$MYSQL_PREFIX" --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir= --enable-xml --disable-rpath --enable-magic-quotes --enable-safe-mode --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --without-pear --with-gettext
